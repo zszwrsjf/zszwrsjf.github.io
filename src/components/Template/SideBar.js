@@ -15,7 +15,8 @@ const SideBar = () => (
 
     <section className="blurb">
       <h2>About</h2>
-      <p>I&apos;m Zhang Song. A master student in <a href="http://www.nlab.ci.i.u-tokyo.ac.jp/index.html"> Nakayama lab</a> U-Tokyo researching NLP and CV.</p>
+      <p>I&apos;m Zhang Song from China. A master student in <a href="http://www.nlab.ci.i.u-tokyo.ac.jp/index.html"> Nakayama lab</a> U-Tokyo researching NLP and CV.</p>
+      <p>Japanese: Business Level(JLPT N2 180), English: Business Level(TOEIC 935)</p>
       <p>I like basketball, anime and travel.</p>
     </section>
 

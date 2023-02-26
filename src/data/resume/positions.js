@@ -5,7 +5,8 @@ const positions = [
     link: 'https://olienttech.com/',
     daterange: 'Jan 2023 – Now',
     points: [
-      '4 people team, lead on core algorithm and backend development.',
+      '4 people team, I lead on core algorithm and backend development.',
+      'logistics(物流) 3rd-party-logistics calculation invoice statement automatic generation.',
       'Python, Django, Pandas, Docker.',
     ],
   },
@@ -16,7 +17,8 @@ const positions = [
     daterange: 'Sep 2022 - Dec 2022',
     points: [
       'Develop, test and debug on workflow system.',
-      'Ruby, Ruby on Rails, Bootstrap, Jquery, Javascript.',
+      'Get detailed work from Boss.',
+      'Ruby, Ruby on Rails, Rspec, Bootstrap, Jquery, Javascript.',
     ],
   },
   {
