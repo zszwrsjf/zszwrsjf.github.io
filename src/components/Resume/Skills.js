@@ -24,23 +24,69 @@ class Skills extends Component {
       this.state.buttons[key] ? key : cat
     ), 'All');
 
-    return this.state.skills.sort((a, b) => {
-      let ret = 0;
-      if (a.competency > b.competency) ret = -1;
-      else if (a.competency < b.competency) ret = 1;
-      else if (a.category[0] > b.category[0]) ret = -1;
-      else if (a.category[0] < b.category[0]) ret = 1;
-      else if (a.title > b.title) ret = 1;
-      else if (a.title < b.title) ret = -1;
-      return ret;
-    }).filter((skill) => (actCat === 'All' || skill.category.includes(actCat)))
-      .map((skill) => (
-        <SkillBar
+    const filteredSkills = this.state.skills.filter((skill) => (actCat === 'All' || skill.category.includes(actCat)))
+      .sort((a, b) => {
+        let ret = 0;
+        if (a.competency > b.competency) ret = -1;
+        else if (a.competency < b.competency) ret = 1;
+        else if (a.category[0] > b.category[0]) ret = -1;
+        else if (a.category[0] < b.category[0]) ret = 1;
+        else if (a.title > b.title) ret = 1;
+        else if (a.title < b.title) ret = -1;
+        return ret;
+      });
+
+    const numRows = Math.ceil(filteredSkills.length / 2);
+
+    const rows = [];
+    for (let i = 0; i < numRows; i += 1) {
+      const skill1 = filteredSkills[i * 2];
+      const skill2 = filteredSkills[i * 2 + 1];
+      let col1 = null;
+      let col2 = null;
+
+      if (skill1) {
+        col1 = (<SkillBar
           categories={this.props.categories}
-          data={skill}
-          key={skill.title}
-        />
-      ));
+          data={skill1}
+          key={skill1.title}
+        />);
+      }
+      if (skill2) {
+        col2 = (<SkillBar
+          categories={this.props.categories}
+          data={skill2}
+          key={skill2.title}
+        />);
+      }
+      rows.push(
+        <div className="row" key={i}>
+          {col1}
+          {col2}
+        </div>,
+      );
+    }
+    return rows;
+
+    // const sortedskills = this.state.skills.sort((a, b) => {
+    //   let ret = 0;
+    //   if (a.competency > b.competency) ret = -1;
+    //   else if (a.competency < b.competency) ret = 1;
+    //   else if (a.category[0] > b.category[0]) ret = -1;
+    //   else if (a.category[0] < b.category[0]) ret = 1;
+    //   else if (a.title > b.title) ret = 1;
+    //   else if (a.title < b.title) ret = -1;
+    //   return ret;
+    // });
+    // console.error(sortedskills);
+    // return sortedskills.filter((skill) => (actCat === 'All' || skill.category.includes(actCat)))
+    //   .map((skill) => (
+    //     <SkillBar
+    //       categories={this.props.categories}
+    //       data={skill}
+    //       key={skill.title}
+    //     />
+    //   ));
   }
 
   getButtons() {
@@ -73,9 +119,6 @@ class Skills extends Component {
         <div className="link-to" id="skills" />
         <div className="title">
           <h3>Skills</h3>
-          <p>Note: I think these sections are silly, but everyone seems to have one.
-            Here is a *mostly* honest overview of my skills.
-          </p>
         </div>
         <div className="skill-button-container">
           {this.getButtons()}

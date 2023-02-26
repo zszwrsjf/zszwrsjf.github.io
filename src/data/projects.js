@@ -1,47 +1,45 @@
 // TODO Add a couple lines about each project
 const data = [
   {
-    title: 'Nearest Dollar',
-    subtitle: '2015 BVP Hackathon',
-    image: '/images/projects/nearestdollar.jpg',
-    date: '2015-11-20',
+    title: 'Health Up APP',
+    subtitle: 'Refrigerator Ingredient Management and Recipe Recommendation',
+    link: 'https://healthup-0.web.app/',
+    image: '/images/projects/health_up.png',
+    date: '2022-12',
     desc:
-      'Built for a social impact hackathon. '
-      + 'NearestDollar connected to your bank accounts, credit cards, '
-      + 'or debit cards and rounded up your purchases to donate the balance to '
-      + 'the charity of your choice.',
+      '8 people team to make a Refrigerator Ingredient Management and Recipe Recommendation App, '
+      + 'which can add ingredients and use them to output recipes. My work is on Business Logic design and '
+      + 'programming on part of backend(Django) and frontend(react+ts).',
+  },
+
+  {
+    title: 'Graduation work in College',
+    subtitle: '卒論',
+    image: '/images/projects/calculator.png',
+    date: '2021-03',
+    desc:
+      'use keras(python) to learn model to recognize hand write numbers, and make a calculator '
+      + 'deployed on Tencent server using nginx and uwsgi.'
+      + 'frontend use python qt.',
   },
   {
-    title: 'Harvest',
-    subtitle: 'Won 3rd. place in 2015 Techcrunch Disrupt SF Hackathon',
-    link: 'https://devpost.com/software/harvest',
-    image: '/images/projects/harvest.jpg',
-    date: '2015-09-20',
+    title: 'NCEPU news app',
+    subtitle: 'NECPU news integration app',
+    image: '/images/projects/news.png',
+    date: '2020-06',
     desc:
-      'Won ~ $7000 in prizes for an advanced, low cost monitoring solution '
-      + 'for crops. Harvest was designed to catch irrigation leaks, overwatering, '
-      + 'and nutrient deficiencies at an affordable price for the developing world.',
+      '4 people team to make a news app which from many platfrom of school news.'
+      + 'crawl data from them and show to the app. '
+      + 'My work is do news data crawler(python) and programming on part of frontend(html-like, css-like on wechat miniprogram)',
   },
   {
-    title: 'Space Potato',
-    subtitle: 'A kickstarter funded potato powered weather balloon.',
-    link: 'http://www.spacepotato.org',
-    image: '/images/projects/spacepotato.jpg',
-    date: '2015-06-28',
+    title: 'University course projects',
+    subtitle: 'University',
+    image: '/images/projects/university.png',
+    link: 'https://github.com/zszwrsjf/university_stuffs',
+    date: '2019-06',
     desc:
-      'Launched a potato battery powered weather balloon with two cameras '
-      + 'and gps transponder. Resulting photos were published in a coffee table book. '
-      + 'You can email me for a copy.',
-  },
-  {
-    title: 'Cat Detector',
-    subtitle: 'A convolutional neural network to classify cats! (and dogs)',
-    image: '/images/projects/catdetector.jpg',
-    date: '2015-05-15',
-    desc:
-      'Trained a convolutional neural network to classify between ~ 80 cats breeds. '
-      + 'Over 60,000 cats were classified before server bills made the project too expensive '
-      + 'to continue hosting.',
+      'some final work when university period. Operation system, machine learning...',
   },
 ];
 
