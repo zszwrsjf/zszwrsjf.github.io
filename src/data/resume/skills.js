@@ -1,5 +1,4 @@
-// TODO: Add Athletic Skills, Office Skills,
-// Data Engineering, Data Science, ML Engineering, ... ?
+
 
 const skills = [
   {
@@ -18,7 +17,7 @@ const skills = [
     category: ['Tools'],
   },
   {
-    title: 'Jave',
+    title: 'Java',
     competency: 2,
     category: ['Languages'],
   },
