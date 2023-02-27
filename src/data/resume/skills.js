@@ -1,5 +1,3 @@
-
-
 const skills = [
   {
     title: 'Ruby',
