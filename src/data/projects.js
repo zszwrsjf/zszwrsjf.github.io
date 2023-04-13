@@ -14,6 +14,7 @@ const data = [
   {
     title: 'Data Analysis of customers data',
     subtitle: 'Data Analysis',
+    image: '/images/projects/sns_logos.png',
     date: '2022-07',
     desc:
       'use sklearn and pyplot to analysis data of customers, and propose a marketing proposal.'
