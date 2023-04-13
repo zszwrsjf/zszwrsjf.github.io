@@ -13,10 +13,10 @@ const data = [
   },
   {
     title: 'Data Analysis of customers data',
-    subtitle: 'Data Analysis', 
+    subtitle: 'Data Analysis',
     date: '2022-07',
     desc:
-    'use sklearn and pyplot to analysis data of customers, and propose a marketing proposal.'
+      'use sklearn and pyplot to analysis data of customers, and propose a marketing proposal.'
     + 'the data is from ADK and the column number is very huge, so I choose COVID-19 and social media data'
     + 'to do the analysis. the result shows after COVID-19, user of the application of combinition of news and remote work'
     + 'will be a good target for marketing.',
