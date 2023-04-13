@@ -1,9 +1,9 @@
 
 # Introduction
 
-I am Zhang Song, a M1 student learning NLP and CV in Creative Informatic, IST, Tokyo University in Nakayama lab. I like learn some new tech of IT and research fancy stuffs.
+I am Zhang Song, a M2 student learning NLP and CV in Creative Informatic, IST, Tokyo University in Nakayama lab. I like learn some new tech of IT and research fancy stuffs.
 <br><br>
-東京大学大学院情報理工研究科創造情報学中山研M1の張頌（チョウショウ）と申します。自然言語処理と画像処理の研究をしています。私は新しい技術を学び、FANCYなものを研究することが好きです。
+東京大学大学院情報理工研究科創造情報学中山研M2の張頌（チョウショウ）と申します。自然言語処理と画像処理の研究をしています。私は新しい技術を学び、FANCYなものを研究することが好きです。
 
 # Research
 
