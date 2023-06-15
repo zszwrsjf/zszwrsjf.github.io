@@ -85,8 +85,8 @@ const skills = [
     category: ['Languages', 'Python'],
   },
   {
-    title: 'C++',
-    competency: 2,
+    title: 'C/C++',
+    competency: 4,
     category: ['Languages'],
   },
   {
