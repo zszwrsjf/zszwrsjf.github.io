@@ -11,7 +11,7 @@
     "node": ">=14.x"
   },
   "scripts": {
-    "build": "npm run rm && rimraf ./build && react-scripts build",
+    "build": "npm run rm && rimraf ./build && react-scripts build && cp build/index.html build/404.html",
     "predeploy": "npm run build && react-snap",
     "start": "react-scripts start",
     "lint": "eslint $(git ls-files '*.js')",
