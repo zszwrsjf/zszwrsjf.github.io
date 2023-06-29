@@ -11,7 +11,7 @@
     "node": ">=14.x"
   },
   "scripts": {
-    "build": "rimraf ./build && react-scripts build",
+    "build": "npm run rm && rimraf ./build && react-scripts build",
     "predeploy": "npm run build && react-snap",
     "start": "react-scripts start",
     "lint": "eslint $(git ls-files '*.js')",
@@ -20,7 +20,7 @@
     "rm": "rm -rf docs",
     "mv": "mv build docs",
     "git": "git add . && git commit -m 'page' && git push",
-    "deploy": "npm run rm && npm run build && npm run mv && npm run git"
+    "deploy": "npm run build && npm run mv && npm run git"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
@@ -54,6 +54,7 @@
     "svgo": "^3.0.2"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^11.2.3",
     "babel-eslint": "^10.1.0",
