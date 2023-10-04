@@ -1,15 +1,15 @@
 const positions = [
-	{
-		company: 'Akari',
-		position: 'Software Engineer + Algorithm Engineer',
-		link: 'https://akariinc.co.jp/',
-		daterange: 'Aug 2023 - Present',
-		points: [
-			'3 people team, I work on making ataframe chatbot agent and backend development.',
-			'construction LLM chatbot agent.',
-			'Python, langchain, FastAPI'
-		]
-	},
+  {
+    company: 'Akari',
+    position: 'Software Engineer + Algorithm Engineer',
+    link: 'https://akariinc.co.jp/',
+    daterange: 'Aug 2023 - Present',
+    points: [
+      '3 people team, I work on making ataframe chatbot agent and backend development.',
+      'construction LLM chatbot agent.',
+      'Python, langchain, FastAPI',
+    ],
+  },
   {
     company: 'Olient Tech',
     position: 'part-time programmer',

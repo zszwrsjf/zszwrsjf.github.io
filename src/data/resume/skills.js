@@ -25,14 +25,14 @@ const skills = [
     category: ['Web Development', 'Python'],
   },
   {
-	title: 'FastAPI',
-	competency: 4,
-	category: ['Web Development', 'Python'],
+    title: 'FastAPI',
+    competency: 4,
+    category: ['Web Development', 'Python'],
   },
   {
-	title: 'langchain',
-	competency: 3,
-	category: ['Python'],
+    title: 'langchain',
+    competency: 3,
+    category: ['Python'],
   },
   {
     title: 'Javascript',
