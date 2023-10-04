@@ -1,12 +1,12 @@
 const skills = [
   {
     title: 'Ruby',
-    competency: 4,
+    competency: 3,
     category: ['Web Development', 'Languages'],
   },
   {
     title: 'Ruby on Rails',
-    competency: 4,
+    competency: 3,
     category: ['Web Development'],
   },
   {
@@ -23,6 +23,16 @@ const skills = [
     title: 'Django',
     competency: 4,
     category: ['Web Development', 'Python'],
+  },
+  {
+	title: 'FastAPI',
+	competency: 4,
+	category: ['Web Development', 'Python'],
+  },
+  {
+	title: 'langchain',
+	competency: 3,
+	category: ['Python'],
   },
   {
     title: 'Javascript',

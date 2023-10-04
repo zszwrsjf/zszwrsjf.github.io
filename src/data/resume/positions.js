@@ -1,24 +1,24 @@
 const positions = [
+	{
+		company: 'Akari',
+		position: 'Software Engineer + Algorithm Engineer',
+		link: 'https://akariinc.co.jp/',
+		daterange: 'Aug 2023 - Present',
+		points: [
+			'3 people team, I work on making ataframe chatbot agent and backend development.',
+			'construction LLM chatbot agent.',
+			'Python, langchain, FastAPI'
+		]
+	},
   {
     company: 'Olient Tech',
     position: 'part-time programmer',
     link: 'https://olienttech.com/',
-    daterange: 'Jan 2023 – Now',
+    daterange: 'Jan 2023 – May 2023',
     points: [
       '4 people team, I lead on core algorithm and backend development.',
       'logistics(物流) 3rd-party-logistics calculation invoice statement automatic generation.',
       'Python, Django, Pandas, Docker.',
-    ],
-  },
-  {
-    company: 'Techouse',
-    position: 'part-time programmer',
-    link: 'https://jp.techouse.com/',
-    daterange: 'Sep 2022 - Dec 2022',
-    points: [
-      'Develop, test and debug on workflow system.',
-      'Get detailed work from Boss.',
-      'Ruby, Ruby on Rails, Rspec, Bootstrap, Jquery, Javascript.',
     ],
   },
   {
