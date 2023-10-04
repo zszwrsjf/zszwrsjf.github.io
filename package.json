@@ -11,7 +11,7 @@
     "node": ">=14.x"
   },
   "scripts": {
-    "build": "rimraf ./build && react-scripts build",
+    "build": "npm run rm && rimraf ./build && react-scripts build && cp build/index.html build/404.html",
     "predeploy": "npm run build && react-snap",
     "start": "react-scripts start",
     "lint": "eslint $(git ls-files '*.js')",
@@ -20,15 +20,24 @@
     "rm": "rm -rf docs",
     "mv": "mv build docs",
     "git": "git add . && git commit -m 'page' && git push",
-    "deploy": "npm run rm && npm run build && npm run mv && npm run git"
+    "deploy": "npm run build && npm run mv && npm run git"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-brands-svg-icons": "^6.1.1",
     "@fortawesome/free-regular-svg-icons": "^6.1.1",
     "@fortawesome/react-fontawesome": "0.1.18",
+    "cheerio": "^1.0.0-rc.12",
+    "css-select": "^5.1.0",
     "dayjs": "^1.11.3",
-    "gh-pages": "^4.0.0",
+    "express": "^4.18.2",
+    "gh-pages": "^3.0.0",
+    "minimalcss": "^0.11.3",
+    "minimist": "^1.2.8",
+    "mkdirp": "^3.0.1",
+    "node-fetch": "^3.3.1",
+    "nth-check": "^2.1.1",
+    "pango": "^0.0.3",
     "prop-types": "^15.8.1",
     "raw.macro": "^0.4.2",
     "react": "^17.0.1",
@@ -39,18 +48,21 @@
     "react-markdown": "^5.0.3",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^5.0.1",
-    "react-snap": "^1.23.0",
-    "rimraf": "^3.0.2"
+    "react-snap": "^0.2.0",
+    "rimraf": "^3.0.2",
+    "sourcemapped-stacktrace-node": "^2.1.8",
+    "svgo": "^3.0.2"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^11.2.3",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.19.0",
-    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb": "^18.2.1",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsx-a11y": "6.5.1",
-    "eslint-plugin-react": "^7.30.0",
+    "eslint-plugin-react": "^7.25.3",
     "sass": "^1.52.3",
     "source-map-explorer": "^2.5.2"
   },
