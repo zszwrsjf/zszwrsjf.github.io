@@ -9,14 +9,14 @@ const SideBar = () => (
       <header>
         <h2>張頌　チョウショウ Zhang Song</h2>
         <p><a href="mailto:zszwrsjf@gmail.com">zszwrsjf@gmail.com</a></p>
-        <p><a href="mailto:song-zhang@cookpad.com">zsmalcarol@g.ecc.u-tokyo.ac.jp</a></p>
+        <p><a href="mailto:song-zhang@cookpad.com">song-zhang@cookpad.com</a></p>
       </header>
     </section>
 
     <section className="blurb">
       <h2>About</h2>
       <p>I&apos;m Zhang Song from China. A software engineer working for Cookpad Inc.</p>
-      <p>Japanese: Business Level(JLPT N2 180), English: Business Level(TOEIC 935)</p>
+      <p>Japanese: Business Level(JLPT N2 180; BJT 576), English: Business Level(TOEIC 935)</p>
       <p>I like travel, food and anime.</p>
     </section>
 
