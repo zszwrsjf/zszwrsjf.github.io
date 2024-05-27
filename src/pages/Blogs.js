@@ -3,30 +3,8 @@ import React, { useEffect, useState } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import queryString from 'query-string';
 import ReactMarkdown from 'react-markdown';
-import raw from 'raw.macro';
 import SubBlog from '../layouts/SubBlog';
-
-const blogsData = [
-  {
-    id: 1,
-    title: '简介',
-    markdown: raw('../data/blogs/start_blog.md'),
-    tag: 'all',
-  },
-  {
-    id: 2,
-    title: 'Blog 2',
-    markdown: 'Content of Blog 2',
-    tag: 'food',
-  },
-  {
-    id: 3,
-    title: 'Blog 3',
-    markdown: 'Content of Blog 3',
-    tag: 'travel',
-  },
-  // Add more blog data as needed
-];
+import blogsData from '../data/blogs/BlogMaps';
 
 const Blogs = () => {
   const [filteredBlogs, setFilteredBlogs] = useState([]);
@@ -59,9 +37,28 @@ const Blogs = () => {
               flexDirection: 'column',
               alignItems: 'center',
               height: '300px',
-              background: 'linear-gradient(to bottom,  rgba(255, 255, 255, 0)), white',
+              overflow: 'hidden',
             }}
           >
+            <div
+              className="mask"
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                background: 'linear-gradient(to bottom, rgba(255, 255, 255, 0), white)',
+              }}
+            >
+              <a href={`/blogs/${blog.id}`} style={{ display: 'block', height: '100%', width: '100%' }}>
+                <span style={{
+                  position: 'absolute', bottom: 0, left: '50%', transform: 'translate(-50%)',
+                }}
+                >查看全文
+                </span>
+              </a>
+            </div>
             <div>
               <h2><a href={`/blogs/${blog.id}`}>{blog.title}</a></h2>
             </div>
@@ -72,6 +69,7 @@ const Blogs = () => {
             >
               {blog.markdown}
             </ReactMarkdown>
+
           </div>
         ))}
       </div>
