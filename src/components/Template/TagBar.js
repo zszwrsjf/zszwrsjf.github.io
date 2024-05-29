@@ -16,6 +16,7 @@ const TagBar = () => (
       <li className="item"><Link to="/blogs?tag=food" className="link">Food</Link></li>
       <li className="item"><Link to="/blogs?tag=anime" className="link">Anime</Link></li>
       <li className="item"><Link to="/blogs?tag=reflection" className="link">Reflection</Link></li>
+      <li className="item"><Link to="/blogs?tag=IT" className="link">IT</Link></li>
     </ul>
   </section>
 );
