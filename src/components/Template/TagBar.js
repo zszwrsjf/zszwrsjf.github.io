@@ -1,13 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const tagBarStyle = {
-  width: '20%',
-  marginTop: '6em',
-};
-
 const TagBar = () => (
-  <section id="tagbar" className="tagbar" style={tagBarStyle}>
+  <section id="tagbar">
     <header className="list">
       <h2>Categories</h2>
     </header>
@@ -16,7 +11,7 @@ const TagBar = () => (
       <li className="item"><Link to="/blogs?tag=food" className="link">Food</Link></li>
       <li className="item"><Link to="/blogs?tag=anime" className="link">Anime</Link></li>
       <li className="item"><Link to="/blogs?tag=reflection" className="link">Reflection</Link></li>
-      <li className="item"><Link to="/blogs?tag=IT" className="link">IT</Link></li>
+      <li className="item"><Link to="/blogs?tag=coding" className="link">Coding</Link></li>
     </ul>
   </section>
 );

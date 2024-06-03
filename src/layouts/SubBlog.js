@@ -7,11 +7,6 @@ import Navigation from '../components/Template/Navigation';
 import TagBar from '../components/Template/TagBar';
 import ScrollToTop from '../components/Template/ScrollToTop';
 
-const subBlogStyle = {
-  width: '80%',
-  padding: '10px',
-};
-
 const SubBlog = (props) => (
   <HelmetProvider>
     <Analytics />
@@ -22,7 +17,7 @@ const SubBlog = (props) => (
     </Helmet>
     <div id="wrapper">
       <Navigation />
-      <div id="SubBlog" style={subBlogStyle}>
+      <div id="SubBlog">
         {props.children}
       </div>
       {props.fullPage ? null : <TagBar />}

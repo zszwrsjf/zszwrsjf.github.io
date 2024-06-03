@@ -7,7 +7,12 @@ const blogsData = [
     markdown: raw('./start_blog.md'),
     tag: 'all',
   },
-  // Add more blog data as needed
+  {
+    id: 2,
+    title: '第一次日本之行',
+    markdown: raw('./first_japan_trip.md'),
+    tag: 'travel',
+  },
 ];
 
 export default blogsData;

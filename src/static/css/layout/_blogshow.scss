@@ -1,0 +1,33 @@
+#blogShow {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 6em;
+
+  #backButton {
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #333;
+    background-color: #fff;
+    position: fixed;
+    left: 10%;
+    transform: translate(0, -50%);
+    padding-inline: 1em;
+  }
+
+  #scrollButton {
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+    border: 1px solid #333;
+    background-color: #fff;
+    padding-inline: 1em;
+  }
+
+  #title {
+    font-size: 40px;
+    text-align: center;
+  }
+}
