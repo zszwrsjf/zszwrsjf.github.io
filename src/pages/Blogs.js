@@ -1,16 +1,17 @@
-// Blogs.js
 import React, { useEffect, useState } from 'react';
-import Pagination from '@mui/material/Pagination';
 import { useLocation, Link } from 'react-router-dom';
 import queryString from 'query-string';
 import ReactMarkdown from 'react-markdown';
 import SubBlog from '../layouts/SubBlog';
 import blogsData from '../data/blogs/BlogMaps';
+import CustomPagination from '../components/Blog/Pagination';
 
 const Blogs = () => {
   const [filteredBlogs, setFilteredBlogs] = useState([]);
   const location = useLocation();
   const LinkRenderer = ({ ...children }) => <Link {...children} />;
+
+  const pageCount = 10;
 
   useEffect(() => {
     const queryParams = queryString.parse(location.search);
@@ -26,7 +27,7 @@ const Blogs = () => {
     <SubBlog title="Blogs">
       <div className="blog-container">
         <h1 className="blog-heading">Blogs</h1>
-        <Pagination count={10} variant="outlined" shape="rounded" />
+        <CustomPagination count={pageCount} variant="outlined" shape="rounded" />
         {filteredBlogs.map((blog) => (
           <div className="blog-preview" key={blog.id}>
             <div className="mask">

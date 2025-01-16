@@ -14,7 +14,7 @@
     "build": "npm run rm && rimraf ./build && react-scripts build && cp build/index.html build/404.html",
     "predeploy": "npm run build && react-snap",
     "start": "react-scripts start",
-    "lint": "eslint $(git diff --name-only --diff-filter=ACM '*.js') --fix",
+    "lint": "eslint $(git diff --name-only --diff-filter=ACM '*.js'&& git ls-files --others --exclude-standard '*.js') --fix",
     "test": "react-scripts test --watchAll=false",
     "analyze": "npm run build && source-map-explorer build/static/js/*.chunk.js",
     "rm": "rm -rf docs",
