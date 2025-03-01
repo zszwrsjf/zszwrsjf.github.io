@@ -7,28 +7,43 @@ import blogsData from '../data/blogs/BlogMaps';
 import CustomPagination from '../components/Blog/Pagination';
 
 const Blogs = () => {
-  const [filteredBlogs, setFilteredBlogs] = useState([]);
+  const [paginatedBlogs, setPaginatedBlogs] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
   const location = useLocation();
   const LinkRenderer = ({ ...children }) => <Link {...children} />;
 
   const pageCount = 10;
 
+  const [allBlogs, setAllBlogs] = useState([]);
+
   useEffect(() => {
     const queryParams = queryString.parse(location.search);
     if (queryParams.tag) {
       const filtered = blogsData.filter((blog) => (blog.tag === queryParams.tag || blog.tag === 'all'));
-      setFilteredBlogs(filtered);
+      setAllBlogs(filtered);
     } else {
-      setFilteredBlogs(blogsData);
+      setAllBlogs(blogsData);
     }
   }, [location.search]);
+
+  useEffect(() => {
+    const startIndex = (currentPage - 1) * pageCount;
+    const endIndex = startIndex + pageCount;
+    setPaginatedBlogs(allBlogs.slice(startIndex, endIndex));
+  }, [currentPage, allBlogs]);
+
+  const totalPages = Math.ceil(allBlogs.length / pageCount);
 
   return (
     <SubBlog title="Blogs">
       <div className="blog-container">
         <h1 className="blog-heading">Blogs</h1>
-        <CustomPagination count={pageCount} variant="outlined" shape="rounded" />
-        {filteredBlogs.map((blog) => (
+        <CustomPagination
+          count={totalPages}
+          page={currentPage}
+          onChange={(event, value) => setCurrentPage(value)}
+        />
+        {paginatedBlogs.map((blog) => (
           <div className="blog-preview" key={blog.id}>
             <div className="mask">
               <a href={`/blogs/${blog.id}`}>
@@ -45,7 +60,6 @@ const Blogs = () => {
             >
               {blog.markdown}
             </ReactMarkdown>
-
           </div>
         ))}
       </div>

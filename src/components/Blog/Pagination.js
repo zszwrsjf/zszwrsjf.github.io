@@ -6,6 +6,7 @@ const CustomPagination = ({
   count,
   page,
   onChange,
+  siblingCount = 0,
   variant = 'outlined',
   shape = 'rounded',
 }) => (
@@ -16,6 +17,7 @@ const CustomPagination = ({
       onChange={onChange}
       variant={variant}
       shape={shape}
+      siblingCount={siblingCount}
     />
   </Stack>
 );
@@ -24,6 +26,7 @@ CustomPagination.propTypes = {
   count: PropTypes.number.isRequired,
   page: PropTypes.number.isRequired,
   onChange: PropTypes.func.isRequired,
+  siblingCount: PropTypes.number,
   variant: PropTypes.string,
   shape: PropTypes.string,
 };
@@ -31,6 +34,7 @@ CustomPagination.propTypes = {
 CustomPagination.defaultProps = {
   variant: 'outlined',
   shape: 'rounded',
+  siblingCount: 0,
 };
 
 export default CustomPagination;

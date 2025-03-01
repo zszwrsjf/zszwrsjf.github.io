@@ -3,8 +3,8 @@
 // Define variables
 $section-spacing: 2em;
 $border-color: #ddd;
+$transition-duration: 0.1s;
 
-// TagBar styles
 #tagbar {
   margin-right: $section-spacing;
   min-width: 22em;
@@ -13,29 +13,42 @@ $border-color: #ddd;
   border: 1px solid $border-color;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all $transition-duration ease;
 
   .list {
     padding: 1em;
     border-bottom: 1px solid $border-color;
     text-align: center;
+    position: relative;
+    cursor: pointer;
 
     h2 {
       margin: 0;
       font-size: 1.2em;
       color: #333;
     }
+
+    .toggle-icon {
+      display: none;
+      position: absolute;
+      right: 1em;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.5em;
+      color: #555;
+    }
   }
 
-  ul {
+  .tag-list {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    transition: max-height $transition-duration ease;
 
     .item {
       border-top: 1px solid $border-color;
-      transition: background-color 0.3s ease;
+      transition: background-color $transition-duration ease;
       text-align: center;
-
 
       &:first-child {
         border-top: none;
@@ -46,7 +59,7 @@ $border-color: #ddd;
         padding: 1em;
         color: #555;
         text-decoration: none;
-        transition: color 0.3s ease;
+        transition: color $transition-duration ease;
 
         &:hover {
           color: #000;
@@ -56,9 +69,36 @@ $border-color: #ddd;
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @include breakpoint(large) {
     width: 100%;
     min-width: 0;
-    margin-right: 0;
+    margin: 1em 0;
+    position: relative;
+
+    .list {
+      .toggle-icon {
+        display: block;
+      }
+    }
+
+    .tag-list {
+      max-height: 0;
+      overflow: hidden;
+    }
+
+    &.expanded .tag-list {
+      max-height: 300px;
+    }
+  }
+}
+
+
+.mobile-tagbar {
+  display: none;
+}
+
+@include breakpoint(large) {
+  .mobile-tagbar {
+    display: block;
   }
 }

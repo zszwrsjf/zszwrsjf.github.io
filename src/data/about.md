@@ -1,4 +1,4 @@
-Hello there! I'm Zhang Song. I completed my undergraduate studies in Beijing and came to Japan for my master's degree. I graduated and working as a software engineer.
+Hello there! I'm Zhang Song. I completed my undergraduate studies in Beijing and came to Japan for my master's degree. I graduated from the University of Tokyo and now working as a software engineer.
 
 
 

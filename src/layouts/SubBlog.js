@@ -17,10 +17,13 @@ const SubBlog = (props) => (
     </Helmet>
     <div id="wrapper">
       <Navigation />
+      <div className="mobile-tagbar">
+        <TagBar />
+      </div>
       <div id="SubBlog">
         {props.children}
       </div>
-      {props.fullPage ? null : <TagBar />}
+      <TagBar />
     </div>
   </HelmetProvider>
 );
@@ -30,14 +33,12 @@ SubBlog.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]),
-  fullPage: PropTypes.bool,
   title: PropTypes.string,
   description: PropTypes.string,
 };
 
 SubBlog.defaultProps = {
   children: null,
-  fullPage: false,
   title: null,
   description: "Zhang Song's personal website.",
 };
