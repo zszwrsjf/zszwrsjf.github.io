@@ -40,7 +40,13 @@ const BlogShow = () => {
     <div>
       <Navigation />
       <div id="blogShow">
-        <button id="backButton" type="button" onClick={handleBackClick}>返回</button>
+        <button
+          id="backButton"
+          type="button"
+          onClick={handleBackClick}
+        >
+          返回
+        </button>
         <h1 id="title">{blog.title}</h1>
         <ReactMarkdown>{blog.markdown}</ReactMarkdown>
         {showScrollButton && (
