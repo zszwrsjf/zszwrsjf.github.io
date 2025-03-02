@@ -20,6 +20,11 @@ const data = [
     label: 'LinkedIn',
     icon: faLinkedinIn,
   },
+  {
+    link: 'https://youtrust.jp/users/a42543368846159b2f7224bca79a34f4',
+    label: 'Youtrust',
+    iconPath: '/images/youtrust.svg',
+  },
 ];
 
 export default data;

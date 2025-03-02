@@ -9,7 +9,15 @@ const ContactIcons = () => (
     {data.map((s) => (
       <li key={s.label}>
         <a href={s.link}>
-          <FontAwesomeIcon icon={s.icon} />
+          {s.iconPath ? (
+            <img
+              src={s.iconPath}
+              alt={s.label}
+              style={{ width: '18px', height: '18px', verticalAlign: 'text-top' }}
+            />
+          ) : (
+            <FontAwesomeIcon icon={s.icon} />
+          )}
         </a>
       </li>
     ))}
