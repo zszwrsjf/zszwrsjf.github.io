@@ -17,8 +17,8 @@ const routes = [
     path: '/blogs',
   },
   {
-    label: 'Footprints',
-    path: '/footprints',
+    label: '温泉収集',
+    path: '/onsen',
   },
 ];
 

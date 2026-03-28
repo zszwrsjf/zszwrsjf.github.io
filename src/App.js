@@ -25,8 +25,8 @@ const App = () => (
         <Route exact path="/resume" component={Resume} />
         <Route exact path="/blogs" component={Blogs} />
         <Route path="/blogs/:id" component={BlogShow} />
-        <Route exact path="/footprints" component={Footprints} />
-        <Route path="/footprints/:id" component={FootprintShow} />
+        <Route exact path="/onsen" component={Footprints} />
+        <Route path="/onsen/:id" component={FootprintShow} />
         <Route component={NotFound} status={404} />
       </Switch>
     </Suspense>
