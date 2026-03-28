@@ -16,6 +16,10 @@ const routes = [
     label: 'Blogs',
     path: '/blogs',
   },
+  {
+    label: 'Footprints',
+    path: '/footprints',
+  },
 ];
 
 export default routes;

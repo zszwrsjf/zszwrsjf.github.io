@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
+import rehypeRaw from 'rehype-raw';
 import { useParams, useHistory } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowAltCircleUp } from '@fortawesome/free-regular-svg-icons';
@@ -48,7 +49,9 @@ const BlogShow = () => {
           返回
         </button>
         <h1 id="title">{blog.title}</h1>
-        <ReactMarkdown>{blog.markdown}</ReactMarkdown>
+        <ReactMarkdown rehypePlugins={[rehypeRaw]}>
+          {blog.markdown}
+        </ReactMarkdown>
         {showScrollButton && (
           <button id="scrollButton" type="button" onClick={handleScrollToTop}>
             <FontAwesomeIcon icon={faArrowAltCircleUp} /> 返回顶部

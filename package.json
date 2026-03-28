@@ -12,7 +12,6 @@
   },
   "scripts": {
     "build": "npm run rm && rimraf ./build && react-scripts build && cp build/index.html build/404.html",
-    "predeploy": "npm run build && react-snap",
     "start": "react-scripts start",
     "lint": "eslint $(git diff --name-only --diff-filter=ACM '*.js'&& git ls-files --others --exclude-standard '*.js') --fix",
     "test": "react-scripts test --watchAll=false",
@@ -23,6 +22,7 @@
     "deploy": "npm run build && npm run mv && npm run git"
   },
   "dependencies": {
+    "@craco/craco": "^7.1.0",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
@@ -56,6 +56,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "^5.0.1",
     "react-snap": "^0.2.0",
+    "rehype-raw": "^7.0.0",
     "rimraf": "^3.0.2",
     "sourcemapped-stacktrace-node": "^2.1.8",
     "svgo": "^3.0.2"

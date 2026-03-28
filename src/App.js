@@ -14,6 +14,8 @@ const Projects = lazy(() => import('./pages/Projects'));
 const Resume = lazy(() => import('./pages/Resume'));
 const Blogs = lazy(() => import('./pages/Blogs'));
 const BlogShow = lazy(() => import('./pages/BlogShow'));
+const Footprints = lazy(() => import('./pages/Footprints'));
+const FootprintShow = lazy(() => import('./pages/FootprintShow'));
 const App = () => (
   <BrowserRouter basename={PUBLIC_URL}>
     <Suspense fallback={<Main />}>
@@ -23,6 +25,8 @@ const App = () => (
         <Route exact path="/resume" component={Resume} />
         <Route exact path="/blogs" component={Blogs} />
         <Route path="/blogs/:id" component={BlogShow} />
+        <Route exact path="/footprints" component={Footprints} />
+        <Route path="/footprints/:id" component={FootprintShow} />
         <Route component={NotFound} status={404} />
       </Switch>
     </Suspense>
